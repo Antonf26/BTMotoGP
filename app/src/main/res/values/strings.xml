@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MotoGP</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="leaders">
+        <item>1 Valentino Rossi Yamaha</item>
+        <item>2 Jorge Lorenzo Yamaha</item>
+        <item>3 Andrea Dovizioso Ducati</item>
+    </string-array>
+</resources>
