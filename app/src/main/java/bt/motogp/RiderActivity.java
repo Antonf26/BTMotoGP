@@ -2,45 +2,29 @@ package bt.motogp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import bt.motogp.Models.RiderList;
 
-
-public class MainActivity extends Activity {
+public class RiderActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        RiderList.populate();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ListView leaderList = (ListView) findViewById(R.id.leaderList);
-        leaderList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Intent riderDetailIntent = new Intent(getBaseContext(), RiderActivity.class);
-                riderDetailIntent.putExtra("driverName", ((TextView)view).getText().toString());
-                startActivity(riderDetailIntent);
-            }
-        });
-
-
-
+        setContentView(R.layout.activity_rider);
+        Intent intent = getIntent();
+        String driverString = intent.getStringExtra("driverName");
+        TextView driverText = (TextView) findViewById(R.id.riderText);
+        driverText.setText(driverString);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_rider, menu);
         return true;
     }
 
