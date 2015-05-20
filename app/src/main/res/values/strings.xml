@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MotoGP</string>
+    <string name="app_name">BTMotoGP</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -8,4 +8,5 @@
         <item>2 Jorge Lorenzo Yamaha</item>
         <item>3 Andrea Dovizioso Ducati</item>
     </string-array>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
