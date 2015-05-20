@@ -20,6 +20,12 @@ public class RiderList {
         return riders;
     }
 
+    public static Rider GetRider(int id)
+    {
+        populate();
+        return riders.get(id);
+    }
+
 
 
 }

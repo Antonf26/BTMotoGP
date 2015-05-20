@@ -6,7 +6,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import bt.motogp.Models.Rider;
+import bt.motogp.Models.RiderList;
 
 
 public class RiderActivity extends Activity {
@@ -16,9 +22,42 @@ public class RiderActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rider);
         Intent intent = getIntent();
-        String driverString = intent.getStringExtra("driverName");
-        TextView driverText = (TextView) findViewById(R.id.riderText);
-        driverText.setText(driverString);
+        int driverId = intent.getIntExtra("driverID", 0);
+        populateDetails(driverId);
+
+    }
+
+    public void populateDetails(int driverId)
+    {
+        Rider rider = RiderList.GetRider(driverId);
+
+
+        TextView riderName = (TextView) findViewById(R.id.riderName);
+        riderName.setText("Name: " + rider.name);
+        TextView teamName = (TextView) findViewById(R.id.riderTeam);
+        teamName.setText("Team: " + rider.team);
+        TextView riderSpeed = (TextView) findViewById(R.id.riderSpeed);
+        riderSpeed.setText("Avg. Speed: " + rider.speed + "km/h");
+
+        ImageView driverImage = (ImageView) findViewById(R.id.driverImage);
+        int imageId;
+        switch(driverId)
+        {
+            case 0:
+                imageId = R.drawable.r0;
+                break;
+            case 1:
+                imageId = R.drawable.r1;
+                break;
+            default:
+                imageId = R.drawable.r3;
+                break;
+
+        }
+        driverImage.setImageResource(imageId);
+
+
+
     }
 
     @Override

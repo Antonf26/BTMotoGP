@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent riderDetailIntent = new Intent(getBaseContext(), RiderActivity.class);
-                riderDetailIntent.putExtra("driverName", ((TextView)view).getText().toString());
+                riderDetailIntent.putExtra("driverID", position);
                 startActivity(riderDetailIntent);
             }
         });
