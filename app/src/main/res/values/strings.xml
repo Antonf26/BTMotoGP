@@ -1,15 +1,20 @@
 <resources>
     <string name="app_name">BTMotoGP</string>
 
-    <string name="hello_world">Hello world!</string>
+
     <string name="action_settings">Settings</string>
+    <string name="action_watch">Watch Now</string>
+    <string name="action_track">Track</string>
+    <string name="action_riders">Riders</string>
+    <string name="action_vote">Vote</string>
+    <string name="action_talk">Talk</string>
     <string-array name="leaders">
         <item>1 Valentino Rossi Yamaha</item>
         <item>2 Jorge Lorenzo Yamaha</item>
         <item>3 Andrea Dovizioso Ducati</item>
     </string-array>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_rider">RiderActivity</string>
+    <string name="title_activity_rider">Rider Stats</string>
     <color name="black">#000</color>
     <color name="white">#fff</color>
 </resources>
