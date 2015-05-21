@@ -86,6 +86,13 @@ public class RiderActivity extends Activity {
             return true;
         }
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_riders) {
+            Intent intent = new Intent(this, RiderListActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
