@@ -40,6 +40,10 @@
             android:name=".RiderActivity"
             android:label="@string/title_activity_rider" >
         </activity>
+        <activity
+            android:name=".RiderListActivity"
+            android:label="@string/title_activity_rider_list" >
+        </activity>
     </application>
 
 </manifest>
