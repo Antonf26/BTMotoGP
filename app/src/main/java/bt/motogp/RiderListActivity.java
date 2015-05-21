@@ -116,9 +116,19 @@ public class RiderListActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_track) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
             return true;
         }
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_riders) {
+            Intent intent = new Intent(this, RiderListActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
