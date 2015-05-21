@@ -1,5 +1,6 @@
 package bt.motogp;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
@@ -15,6 +16,8 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
     }
 
     @Override
