@@ -41,7 +41,7 @@ public class RiderListActivity extends Activity {
         row.put("Team", "Ducati");
         data.add(row);
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r0);
+        row.put("Icon", R.drawable.r1);
         row.put("Name", "Marc MARQUEZ");
         row.put("Team", "Honda");
         data.add(row);
@@ -51,12 +51,12 @@ public class RiderListActivity extends Activity {
         row.put("Team", "Ducati");
         data.add(row);
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r0);
+        row.put("Icon", R.drawable.r1);
         row.put("Name", "Cal CRUTCHLOW");
         row.put("Team", "Honda");
         data.add(row);
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r0);
+        row.put("Icon", R.drawable.r3);
         row.put("Name", "Bradley SMITH");
         row.put("Team", "Yamaha");
         data.add(row);
@@ -66,11 +66,11 @@ public class RiderListActivity extends Activity {
         row.put("Team", "Yamaha");
         data.add(row);
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r0);
+        row.put("Icon", R.drawable.r3);
         row.put("Name", "Aleix ESPARGARO");
         row.put("Team", "Suzuki");
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r0);
+        row.put("Icon", R.drawable.r1);
         row.put("Name", "Maverick VINALES");
         row.put("Team", "Suzuki");
         data.add(row);
@@ -85,7 +85,7 @@ public class RiderListActivity extends Activity {
 
         SimpleAdapter adapter = new SimpleAdapter(this,
                 data,
-                R.layout.row,
+                R.layout.list_row,
                 new String[] {"Icon","Name","Team"},
                 new int[] {R.id.imageView, R.id.textView4,R.id.textView5});
         listView.setAdapter(adapter);
