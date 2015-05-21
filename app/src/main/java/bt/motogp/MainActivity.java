@@ -26,19 +26,53 @@ public class MainActivity extends Activity {
 
     static{
         HashMap<String, Object> row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r0);
-        row.put("Name", "Valentino Rossi");
+        row.put("Position", "1st");
+        row.put("Name", "Valentino ROSSI");
         row.put("Team", "Yamaha");
         data.add(row);
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r1);
-        row.put("Name", "Jorge Lorenzo");
+        row.put("Position", "2nd");
+        row.put("Name", "Jorge LORENZO");
         row.put("Team", "Yamaha");
         data.add(row);
         row  = new HashMap<String, Object>();
-        row.put("Icon", R.drawable.r3);
-        row.put("Name", "Andrea Doviziaso");
+        row.put("Position", "3rd");
+        row.put("Name", "Andrea DOVIASO");
         row.put("Team", "Ducati");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Position", "4th");
+        row.put("Name", "Marc MARQUEZ");
+        row.put("Team", "Honda");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Position", "5th");
+        row.put("Name", "Andrea IANNONE");
+        row.put("Team", "Ducati");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Position", "6th");
+        row.put("Name", "Cal CRUTCHLOW");
+        row.put("Team", "Honda");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Position", "7th");
+        row.put("Name", "Bradley SMITH");
+        row.put("Team", "Yamaha");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Position", "8th");
+        row.put("Name", "Pol ESPARGARO");
+        row.put("Team", "Yamaha");
+        row  = new HashMap<String, Object>();
+        row.put("Position", "9th");
+        data.add(row);
+        row.put("Name", "Aleix ESPARGARO");
+        row.put("Team", "Suzuki");
+        row  = new HashMap<String, Object>();
+        row.put("Position", "10th");
+        row.put("Name", "Maverick VINALES");
+        row.put("Team", "Suzuki");
         data.add(row);
     }
 
@@ -52,8 +86,8 @@ public class MainActivity extends Activity {
         SimpleAdapter adapter = new SimpleAdapter(this,
                 data,
                 R.layout.row,
-                new String[] {"Icon","Name","Team"},
-                new int[] { R.id.imageView, R.id.textView4,R.id.textView5});
+                new String[] {"Position","Name","Team"},
+                new int[] {R.id.textView6, R.id.textView4,R.id.textView5});
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
