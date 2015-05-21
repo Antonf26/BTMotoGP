@@ -3,50 +3,69 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="bt.motogp.RiderActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="bt.motogp.RiderActivity"
+    android:background="@color/black"
 
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical" >
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/driverImage"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="65dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:layout_gravity="center_horizontal"
+        android:text="nAME"
         android:id="@+id/riderName"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="84dp" />
-
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="team"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/riderTeam"
+            android:textColor="@color/white"
+            />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/riderTeam"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:layout_gravity="center_horizontal"
+        android:text="speed"
         android:id="@+id/riderSpeed"
-        android:layout_above="@+id/riderTeam"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@color/white"
+/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="lastlap"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/riderLastLap"
+        android:textColor="@color/white"
+/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/riderLastLap"
-        android:layout_above="@+id/riderSpeed"
-        android:layout_centerHorizontal="true" />
-
+        android:text="avglap"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/riderAvgLap"
+        android:textColor="@color/white"
+/>
+</LinearLayout>
 </RelativeLayout>

@@ -38,6 +38,11 @@ public class RiderActivity extends Activity {
         teamName.setText("Team: " + rider.team);
         TextView riderSpeed = (TextView) findViewById(R.id.riderSpeed);
         riderSpeed.setText("Avg. Speed: " + rider.speed + "km/h");
+        TextView riderLastLap = (TextView) findViewById(R.id.riderLastLap);
+        riderLastLap.setText("Last Lap: " + rider.lastLapTime + "s");
+        TextView riderAvgLap = (TextView) findViewById(R.id.riderAvgLap);
+        riderAvgLap.setText("Avg Lap: " + rider.avgLapTime + "s" );
+
 
         ImageView driverImage = (ImageView) findViewById(R.id.driverImage);
         int imageId;

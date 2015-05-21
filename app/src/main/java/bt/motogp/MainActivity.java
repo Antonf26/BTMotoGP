@@ -10,20 +10,52 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import bt.motogp.Models.RiderList;
 
 
 public class MainActivity extends Activity {
 
+    final static ArrayList<HashMap<String, ?>> data = new ArrayList<HashMap<String, ?>>();
+
+    static{
+        HashMap<String, Object> row  = new HashMap<String, Object>();
+        row.put("Icon", R.drawable.r0);
+        row.put("Name", "Valentino Rossi");
+        row.put("Team", "Yamaha");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Icon", R.drawable.r1);
+        row.put("Name", "Jorge Lorenzo");
+        row.put("Team", "Yamaha");
+        data.add(row);
+        row  = new HashMap<String, Object>();
+        row.put("Icon", R.drawable.r3);
+        row.put("Name", "Andrea Doviziaso");
+        row.put("Team", "Ducati");
+        data.add(row);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         RiderList.populate();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView leaderList = (ListView) findViewById(R.id.leaderList);
-        leaderList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ListView listView = (ListView) findViewById(R.id.leaderList);
+
+        SimpleAdapter adapter = new SimpleAdapter(this,
+                data,
+                R.layout.row,
+                new String[] {"Icon","Name","Team"},
+                new int[] { R.id.imageView, R.id.textView4,R.id.textView5});
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -32,9 +64,6 @@ public class MainActivity extends Activity {
                 startActivity(riderDetailIntent);
             }
         });
-
-
-
     }
 
     @Override

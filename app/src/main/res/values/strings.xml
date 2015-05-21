@@ -10,4 +10,6 @@
     </string-array>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_rider">RiderActivity</string>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
 </resources>

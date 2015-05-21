@@ -16,9 +16,8 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="146dp"
+            android:layout_height="218dp"
             android:id="@+id/leaderList"
-            android:layout_weight="0.18"
             android:entries="@array/leaders"
             />
 
