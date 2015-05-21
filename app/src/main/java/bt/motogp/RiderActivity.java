@@ -44,7 +44,7 @@ public class RiderActivity extends Activity {
         riderAvgLap.setText("Avg Lap: " + rider.avgLapTime + "s" );
 
 
-        ImageView driverImage = (ImageView) findViewById(R.id.driverImage);
+        ImageView driverImage = (ImageView) findViewById(R.id.riderImage);
         int imageId;
         switch(driverId)
         {

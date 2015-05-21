@@ -7,65 +7,84 @@
     android:background="@color/black"
 
     >
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:orientation="vertical" >
-    <ImageView
+
+        <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/driverImage"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="65dp" />
+        android:src="@drawable/r0"
+        android:id="@+id/riderImage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="20dp" />
 
-    <TextView
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_gravity="center_horizontal"
-        android:text="nAME"
+        android:text="name"
+            android:textSize="16dp"
         android:id="@+id/riderName"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
-         />
+            android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/riderImage" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="team"
+            android:textSize="16dp"
             android:layout_gravity="center_horizontal"
             android:id="@+id/riderTeam"
             android:textColor="@color/white"
-            />
+            android:layout_below="@+id/riderName"
+            android:layout_toEndOf="@+id/riderImage" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_gravity="center_horizontal"
         android:text="speed"
+        android:textSize="16dp"
         android:id="@+id/riderSpeed"
         android:textColor="@color/white"
-/>
+        android:layout_below="@+id/riderTeam"
+        android:layout_toEndOf="@+id/riderImage" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="lastlap"
+        android:textSize="16dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/riderLastLap"
         android:textColor="@color/white"
-/>
+        android:layout_below="@+id/riderSpeed"
+        android:layout_toEndOf="@+id/riderImage" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="avglap"
+        android:textSize="16dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/riderAvgLap"
         android:textColor="@color/white"
-/>
-</LinearLayout>
+        android:layout_below="@+id/riderLastLap"
+        android:layout_alignStart="@+id/riderLastLap" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watch live"
+        android:id="@+id/button"
+        android:layout_marginTop="62dp"
+        android:background="#ffffb900"
+        android:layout_below="@+id/riderAvgLap"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:width="150dp" />
+
 </RelativeLayout>
